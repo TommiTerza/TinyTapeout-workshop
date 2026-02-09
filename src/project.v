@@ -25,7 +25,6 @@ module tt_um_TOMMITERZA_VGA_CONTROLLER(
   wire video_active;
   wire [9:0] pix_x;
   wire [9:0] pix_y;
-  wire sound;
 
   // TinyVGA PMOD
   assign uo_out = {hsync, B[0], G[0], R[0], vsync, B[1], G[1], R[1]};
@@ -35,7 +34,7 @@ module tt_um_TOMMITERZA_VGA_CONTROLLER(
   assign uio_oe  = 0;
 
   // Suppress unused signals warning
-  wire _unused_ok = &{ena, ui_in, uio_in, pix_y, sound};
+  wire _unused_ok = &{ena, ui_in, uio_in, pix_y};
 
   reg [9:0] counter;
   reg signed [9:0] speed_counter;
