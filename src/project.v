@@ -41,8 +41,6 @@ module tt_um_TOMMITERZA_VGA_CONTROLLER(
   reg signed [9:0] speed_counter;
   reg speed_dir;
 
-  wire [1:0] speed_sel;
-
   hvsync_generator hvsync_gen(
     .clk(clk),
     .reset(~rst_n),
